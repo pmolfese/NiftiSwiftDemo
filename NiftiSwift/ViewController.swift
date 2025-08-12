@@ -8,7 +8,9 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet weak var quadView: NiftiQuadView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,30 @@ class ViewController: NSViewController {
         }
     }
 
+    
+    
+    var nifti: NiftiImage? {
+            didSet {
+                guard let nifti = nifti else { return }
+                quadView.niftiImage = nifti
+            }
+        }
+    
+    
+    @IBAction func openButtonClicked(_ sender: Any) {
+            let panel = NSOpenPanel()
+            panel.title = "Open NIFTI File"
+            panel.allowsMultipleSelection = false
+            panel.canChooseDirectories = false
 
+            panel.begin { [weak self] response in
+                guard response == .OK, let url = panel.url else { return }
+                if let nifti = NiftiImage(filename: url.path) {
+                    DispatchQueue.main.async {
+                        self?.quadView.niftiImage = nifti
+                    }
+                }
+            }
+        }
 }
 
