@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>gov.nih.cmn.niftiapp</string>
+	<string>com.example.niftiviewer</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,9 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.15</string>
-	<key>CFBundleIconFile</key>
-	<string>AppIcon</string>
+	<string>15.0</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -42,8 +40,10 @@
 				</array>
 				<key>public.mime-type</key>
 				<array>
+					<string>application/nifti</string>
 					<string>application/x-nifti</string>
 					<string>application/gzip</string>
+					<string>application/x-dbt</string>
 				</array>
 			</dict>
 		</dict>
