@@ -6,14 +6,83 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7701F1802E4BC59B008A2B46 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7701F17F2E4BC59B008A2B46 /* SwiftUI.framework */; };
+		774F3D732E4BBBCE007F0ED6 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F3D722E4BBBCE007F0ED6 /* Quartz.framework */; };
+		774F3D802E4BBBCE007F0ED6 /* NiftiQuickLook.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 774F3D702E4BBBCE007F0ED6 /* NiftiQuickLook.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		774F3D882E4BBE60007F0ED6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F3D872E4BBE60007F0ED6 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		774F3D7E2E4BBBCE007F0ED6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 774F3CED2E4B9EB3007F0ED6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 774F3D6F2E4BBBCE007F0ED6;
+			remoteInfo = NiftiQuickLook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		774F3D812E4BBBCE007F0ED6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				774F3D802E4BBBCE007F0ED6 /* NiftiQuickLook.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7701F17F2E4BC59B008A2B46 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		774F3CF52E4B9EB3007F0ED6 /* NiftiSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiftiSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		774F3D702E4BBBCE007F0ED6 /* NiftiQuickLook.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NiftiQuickLook.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		774F3D722E4BBBCE007F0ED6 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		774F3D872E4BBE60007F0ED6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		774F3D842E4BBBCE007F0ED6 /* Exceptions for "NiftiQuickLook" folder in "NiftiQuickLook" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 774F3D6F2E4BBBCE007F0ED6 /* NiftiQuickLook */;
+		};
+		774F3D8E2E4BBE8A007F0ED6 /* Exceptions for "NiftiSwift" folder in "NiftiQuickLook" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				nifti_clib/libfslio.a,
+				nifti_clib/libnifticdf.a,
+				nifti_clib/libniftiio.a,
+				nifti_clib/libz.a,
+				nifti_clib/libznz.a,
+				NiftiImage.swift,
+				NiftiQuadView.swift,
+			);
+			target = 774F3D6F2E4BBBCE007F0ED6 /* NiftiQuickLook */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		774F3CF72E4B9EB3007F0ED6 /* NiftiSwift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				774F3D8E2E4BBE8A007F0ED6 /* Exceptions for "NiftiSwift" folder in "NiftiQuickLook" target */,
+			);
 			path = NiftiSwift;
+			sourceTree = "<group>";
+		};
+		774F3D742E4BBBCE007F0ED6 /* NiftiQuickLook */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				774F3D842E4BBBCE007F0ED6 /* Exceptions for "NiftiQuickLook" folder in "NiftiQuickLook" target */,
+			);
+			path = NiftiQuickLook;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +95,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		774F3D6D2E4BBBCE007F0ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7701F1802E4BC59B008A2B46 /* SwiftUI.framework in Frameworks */,
+				774F3D882E4BBE60007F0ED6 /* Cocoa.framework in Frameworks */,
+				774F3D732E4BBBCE007F0ED6 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				774F3CF72E4B9EB3007F0ED6 /* NiftiSwift */,
+				774F3D742E4BBBCE007F0ED6 /* NiftiQuickLook */,
+				774F3D712E4BBBCE007F0ED6 /* Frameworks */,
 				774F3CF62E4B9EB3007F0ED6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +122,19 @@
 			isa = PBXGroup;
 			children = (
 				774F3CF52E4B9EB3007F0ED6 /* NiftiSwift.app */,
+				774F3D702E4BBBCE007F0ED6 /* NiftiQuickLook.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		774F3D712E4BBBCE007F0ED6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7701F17F2E4BC59B008A2B46 /* SwiftUI.framework */,
+				774F3D872E4BBE60007F0ED6 /* Cocoa.framework */,
+				774F3D722E4BBBCE007F0ED6 /* Quartz.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +147,12 @@
 				774F3CF12E4B9EB3007F0ED6 /* Sources */,
 				774F3CF22E4B9EB3007F0ED6 /* Frameworks */,
 				774F3CF32E4B9EB3007F0ED6 /* Resources */,
+				774F3D812E4BBBCE007F0ED6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				774F3D7F2E4BBBCE007F0ED6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				774F3CF72E4B9EB3007F0ED6 /* NiftiSwift */,
@@ -69,6 +163,28 @@
 			productName = NiftiSwift;
 			productReference = 774F3CF52E4B9EB3007F0ED6 /* NiftiSwift.app */;
 			productType = "com.apple.product-type.application";
+		};
+		774F3D6F2E4BBBCE007F0ED6 /* NiftiQuickLook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 774F3D852E4BBBCE007F0ED6 /* Build configuration list for PBXNativeTarget "NiftiQuickLook" */;
+			buildPhases = (
+				774F3D6C2E4BBBCE007F0ED6 /* Sources */,
+				774F3D6D2E4BBBCE007F0ED6 /* Frameworks */,
+				774F3D6E2E4BBBCE007F0ED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				774F3D742E4BBBCE007F0ED6 /* NiftiQuickLook */,
+			);
+			name = NiftiQuickLook;
+			packageProductDependencies = (
+			);
+			productName = NiftiQuickLook;
+			productReference = 774F3D702E4BBBCE007F0ED6 /* NiftiQuickLook.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +197,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					774F3CF42E4B9EB3007F0ED6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					774F3D6F2E4BBBCE007F0ED6 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -100,12 +219,20 @@
 			projectRoot = "";
 			targets = (
 				774F3CF42E4B9EB3007F0ED6 /* NiftiSwift */,
+				774F3D6F2E4BBBCE007F0ED6 /* NiftiQuickLook */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		774F3CF32E4B9EB3007F0ED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		774F3D6E2E4BBBCE007F0ED6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +249,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		774F3D6C2E4BBBCE007F0ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		774F3D7F2E4BBBCE007F0ED6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 774F3D6F2E4BBBCE007F0ED6 /* NiftiQuickLook */;
+			targetProxy = 774F3D7E2E4BBBCE007F0ED6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		774F3D022E4B9EB5007F0ED6 /* Debug */ = {
@@ -255,6 +397,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NiftiSwift/nifti_clib";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -266,12 +409,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NiftiSwift/nifti_clib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gov.nih.nimh.cmn.NiftiSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NiftiSwift/nifti_clib/NiftiQuickView-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NiftiSwift/NiftiSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -286,6 +430,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NiftiSwift/nifti_clib";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -297,12 +442,75 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NiftiSwift/nifti_clib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gov.nih.nimh.cmn.NiftiSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NiftiSwift/nifti_clib/NiftiQuickView-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NiftiSwift/NiftiSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		774F3D822E4BBBCE007F0ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NiftiQuickLook/NiftiQuickLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiftiQuickLook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NiftiQuickLook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NiftiSwift/nifti_clib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gov.nih.nimh.cmn.NiftiSwift.NiftiQuickLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NiftiSwift/NiftiSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		774F3D832E4BBBCE007F0ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NiftiQuickLook/NiftiQuickLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiftiQuickLook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NiftiQuickLook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NiftiSwift/nifti_clib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gov.nih.nimh.cmn.NiftiSwift.NiftiQuickLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NiftiSwift/NiftiSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -324,6 +532,15 @@
 			buildConfigurations = (
 				774F3D052E4B9EB5007F0ED6 /* Debug */,
 				774F3D062E4B9EB5007F0ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		774F3D852E4BBBCE007F0ED6 /* Build configuration list for PBXNativeTarget "NiftiQuickLook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				774F3D822E4BBBCE007F0ED6 /* Debug */,
+				774F3D832E4BBBCE007F0ED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
